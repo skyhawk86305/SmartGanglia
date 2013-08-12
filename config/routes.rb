@@ -1,4 +1,24 @@
 SmartGanglia::Application.routes.draw do
+  resources :system_summaries
+
+  resources :drive_summaries
+
+  resources :nodes
+
+  resources :memories
+
+  resources :hosts
+
+  resources :grids
+
+  resources :drives
+
+  resources :cpus
+
+  resources :clients
+
+  resources :clusters
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
