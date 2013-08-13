@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130812224817) do
+ActiveRecord::Schema.define(version: 20130813025717) do
 
   create_table "clients", force: true do |t|
     t.datetime "created_at"
@@ -24,8 +24,11 @@ ActiveRecord::Schema.define(version: 20130812224817) do
   end
 
   create_table "cpus", force: true do |t|
+    t.float    "load_one"
+    t.float    "load_five"
+    t.float    "load_fifteen"
+    t.text     "description"
     t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "drive_summaries", force: true do |t|

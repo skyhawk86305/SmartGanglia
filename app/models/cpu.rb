@@ -1,3 +1,3 @@
 class Cpu < ActiveRecord::Base
- belogs_to :system
+  belongs_to :system
 end
