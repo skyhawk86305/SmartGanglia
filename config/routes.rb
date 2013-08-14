@@ -1,4 +1,7 @@
 SmartGanglia::Application.routes.draw do
+  
+  root :to => "home#index"
+  
   resources :system_summaries
 
   resources :drive_summaries
