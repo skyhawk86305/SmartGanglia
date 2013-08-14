@@ -1,0 +1,4 @@
+SmartGanglia
+============
+
+Smart Ganglia project
