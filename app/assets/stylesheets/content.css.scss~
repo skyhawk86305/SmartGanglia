@@ -1,6 +1,0 @@
-/* CSS Document */
-/* This style sheet contain styles for the content area */
-.myseagate {
-	background:url(image_path("site_bg.jpg")) repeat-x scroll 0 0 transparent;
- }
-
