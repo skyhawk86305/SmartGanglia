@@ -20,6 +20,8 @@ SmartGanglia::Application.routes.draw do
 
   resources :clients
 
+  resources :storage_healths 
+
   resources :clusters
 
   # The priority is based upon order of creation: first created -> highest priority.

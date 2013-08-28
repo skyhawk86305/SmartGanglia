@@ -1,0 +1,14 @@
+class StorageHealthsController < ApplicationController
+    
+  def index
+     render "storage_health"
+   end
+
+  def show
+  end
+
+  def new
+    @storagehealth = StorageHealth.new
+  end
+ 
+end

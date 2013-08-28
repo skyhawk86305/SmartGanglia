@@ -3,19 +3,34 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Overall Health Statistics</title>
-                <%= stylesheet_link_tag "application", :media => "all" %>
-                <%= javascript_include_tag "application" %>
-                <%= csrf_meta_tags %>
+
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		               
+
+		<!--basic styles-->
+       <link rel="assets/css/less" type="text/css" href="style.less">  
+               
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
 		<!--[if IE 7]>
 		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
 		<![endif]-->
 
 		<!--page specific plugin styles-->
 
-	        <!--[if lte IE 8]>
+		<!--fonts-->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!--ace styles-->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-responsive.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
 
@@ -37,16 +52,11 @@
 .center-1 { text-align:center;}
 
 </style>
-<!--		<script src="assets/js/ace-extra.min.js"></script> -->
+		<script src="assets/js/ace-extra.min.js"></script>
 	</head>
 
 	<body>
-		<div class="navbar" id="navbar">
-			<script type="text/javascript">
-				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
-			</script>
-		</div>
-
+	
 		<div class="main-container container-fluid">
 			<div class="main-content">
 				<div class="breadcrumbs" id="breadcrumbs">
@@ -336,7 +346,7 @@
  window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
-        <!-- <script src="assets/less.js-1.4.2" type="text/javascript"></script> -->  
+        <script src="assets/less.js-1.4.2" type="text/javascript"></script>  
 
 		<script type="text/javascript">
 			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
@@ -349,19 +359,19 @@
 		  <script src="assets/js/excanvas.min.js"></script>
 		<![endif]-->
 
-                <!--<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>  -->
-		<!--<script src="assets/js/jquery.ui.touch-punch.min.js"></script>-->
-		<!--<script src="assets/js/jquery.slimscroll.min.js"></script> -->
-		<!--<script src="assets/js/jquery.easy-pie-chart.min.js"></script> -->
-		<!--<script src="assets/js/jquery.sparkline.min.js"></script>  -->
-		<!-- <script src="assets/js/flot/jquery.flot.min.js"></script>  -->
-		<!-- <script src="assets/js/flot/jquery.flot.pie.min.js"></script> -->
-		<!-- <script src="assets/js/flot/jquery.flot.resize.min.js"></script>  -->
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.slimscroll.min.js"></script>
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="assets/js/jquery.sparkline.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.pie.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.resize.min.js"></script>
 
 		<!--ace scripts-->
 
-		<!-- <script src="assets/js/ace-elements.min.js"></script> -->
-		<!-- <script src="assets/js/ace.min.js"></script>  -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
 
 		<!--inline scripts related to this page-->
 
