@@ -2,6 +2,13 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+September 3, 2013
+
+\demo directory contains HTML demo version
+Added support for flot graphing
+
+To run demo, open index.html file in browser
+
 August 27, 2013
  Merged Storage_Health Ace Responsive Bootstrap Template into smart_ganglia project
  Created storage_heath model and migrations.
