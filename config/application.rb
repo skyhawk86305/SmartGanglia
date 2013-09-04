@@ -12,6 +12,7 @@ module SmartGanglia
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.assets.compile = true
     config.assets.enabled = true
     config.assets.initialize_on_precompile = false
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.

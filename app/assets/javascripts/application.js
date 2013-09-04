@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.flot 
+//= require jquery.flot.resize
 //= require twitter/bootstrap
-//= require turbolinks
+//= require_self
 //= require_tree .

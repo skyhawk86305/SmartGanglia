@@ -15,6 +15,7 @@
  *= require ace-responsive.min
  *= require ace-skins.min
  *= require ace-fonts
+ *= require jquery.jqplot
  *= require_tree .
   */
 
