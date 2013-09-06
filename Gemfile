@@ -7,8 +7,8 @@ gem 'rails', '4.0.0'
 gem 'mysql'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-gem 'bootstrap-sass'
+#gem 'sass-rails', '~> 4.0.0'
+#gem 'bootstrap-sass'
 
 # Use Uglifier as compressor for JavaScript assets
   gem 'uglifier', '>= 1.3.0'
@@ -21,8 +21,7 @@ gem 'bootstrap-sass'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'flot-rails'
-gem 'modernizr-rails'
+#gem 'flot-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'
 
@@ -30,9 +29,10 @@ gem 'modernizr-rails'
 gem 'jbuilder', '~> 1.2'
 
 gem 'execjs'
-
 gem 'therubyracer'
+gem 'less'
 gem 'less-rails'
+gem 'less-rails-fontawesome'
 # Twitter Bootstrap Rails
 gem 'twitter-bootstrap-rails'
 

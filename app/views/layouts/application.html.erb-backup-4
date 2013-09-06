@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Overall Health Statistics</title>
+               <!-- <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery1.4.2/jquery.min.js" %> -->
+                <%= stylesheet_link_tag "application", :media => "all" %>
+                <%= csrf_meta_tags %>
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		               
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!--page specific plugin styles-->
+
+	        <!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!--inline styles related to this page-->
+
+		<!--ace settings handler-->
+
+<style>
+.dcstats-container {
+	box-sizing: border-box;
+	width: 850px;
+	height: 450px;
+	padding: 20px 15px 15px 15px;
+	margin: 15px auto 30px auto;
+	border: 1px solid #ddd;
+	background: #fff;
+	background: linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -o-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -ms-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -moz-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -webkit-linear-gradient(#f6f6f6 0, #fff 50px);
+	box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+	-o-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.dcstats-placeholder {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+.infobox {
+  width:200px; height:82px;
+}
+
+.infobox .action-buttons{
+	position:relative;
+	margin-left: 10px; 
+	top: 2px; right: 2px;
+}
+
+.center-1 { text-align:center;}
+
+</style>
+
+	</head>
+
+	<body>
+             <%= javascript_include_tag "application" %>
+		<div class="navbar" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+		</div>
+
+		<div class="main-container container-fluid">
+			<div class="main-content">
+				<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+						try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="page-content">
+					<div class="page-header position-relative">
+						<h1>
+							<center>Overall Health Statistics</center> 
+						 </h1>
+						 <h2>
+						 	<center>Storage Devices</center>
+						 </h2>		
+					</div><!--/.page-header-->
+
+					<div class="row-fluid">
+						<div class="span12">
+                                                	<div class="space-6"></div>
+							<!--PAGE CONTENT BEGINS-->
+							        <div class="row-fluid">
+
+                            				                <div class="span12 infobox-container">
+									        <div class="infobox infobox-green">
+										        <div class="infobox-icon">
+											        <i class="icon-comments"></i>
+									                </div><!---infobox-icon-->
+									        <div class="infobox-data">
+											<span class="infobox-data-number">7653</span>
+											<div class="infobox-content">Total drives in use</div>
+									        </div><!--/infobox-data -->
+                                                                                </div><!---/infobox infobox-green -->
+                                                                                <div class="infobox infobox-green  ">
+										        <div class="infobox-icon">
+											        <i class="icon-comments"></i>
+									                        </div><!---infobox-icon-->
+									        <div class="infobox-data">
+											<span class="infobox-data-number">7603</span>
+											<div class="infobox-content">SAS</div>
+									        </div><!--/infobox-data -->
+                                                                                </div><!---/infobox infobox-green -->
+                                                                                <div class="infobox infobox-green  ">
+										        <div class="infobox-icon">
+											        <i class="icon-comments"></i>
+									                       </div><!---infobox-icon-->
+									        <div class="infobox-data">
+											<span class="infobox-data-number">50</span>
+											<div class="infobox-content">SATA</div>
+									        </div><!--/infobox-data -->
+                                                                                <div class="badge badge-success">
+                                    	                                  Statistics
+                                                                          <!---  <i class="icon-arrow-up"></i> -->
+                                                                         <div class="action-buttons">
+                                                                         <a href="#" class="purple"><i class="icon-zoom-in bigger-130"></i></a>
+                                                                         </div>
+                                                                         <i class="icon-arrow-up"></i>
+                                                                         </div><!--/badge badge success -->
+                                                                         </div><!---/infobox infobox-green -->
+                                                                         <div class="infobox infobox-green  ">
+										<div class="infobox-icon">
+											<i class="icon-comments"></i>
+									   </div><!---infobox-icon-->
+									   <div class="infobox-data">
+											<span class="infobox-data-number">0.1%</span>
+											<div class="infobox-content">Failed recently:</div>
+									   </div><!--/infobox-data -->
+                                                                        <div class="badge badge-success">
+                                    	                                 Statistics
+                                                                        <div class="action-buttons">
+                                                                        <a href="#" class="purple"><i class="icon-zoom-in bigger-130"></i></a>
+                                                                        </div>
+                                                                       <div class="action-buttons">
+                                                                       <a href="#" class="red"><i class="icon-zoom-in bigger-130"></i></a>
+                                                                      </div>
+				                                       </div><!--/badge badge success -->
+                                				     </div><!---/infobox infobox-green -->
+                               					     <div class="infobox infobox-green  ">
+										<div class="infobox-icon">
+											<i class="icon-comments"></i>
+									   </div><!---infobox-icon-->
+									   <div class="infobox-data">
+											<span class="infobox-data-number">0</span>
+											<div class="infobox-content">OverHeated</div>
+									   </div><!--/infobox-data -->
+                                       <div class="badge badge-success">
+                                    	Statistics
+                                        <div class="action-buttons">
+                                           <a href="#" class="purple"><i class="icon-zoom-in bigger-130"></i></a>
+                                         </div>
+                                          <div class="action-buttons">
+                                            <a href="#" class="red"><i class="icon-zoom-in bigger-130"></i></a>
+                                          </div>
+                                          <div class="action-buttons">
+                                            <a href="#" class="green"><i class="icon-zoom-in bigger-130"></i></a>
+                                          </div>
+                                       </div><!--/badge badge success -->
+                                    </div><!---/infobox infobox-green -->
+                                     <div class="infobox infobox-green  ">
+										<div class="infobox-icon">
+											<i class="icon-comments"></i>
+									   </div><!---infobox-icon-->
+									   <div class="infobox-data">
+											<span class="infobox-data-number">5</span>
+											<div class="infobox-content">Overload</div>
+											<div class="infobox-content">(workout)</div>
+									   </div><!--/infobox-data -->
+                                       <div class="badge badge-success">
+                                    	Statistics
+                                         <div class="action-buttons">
+                                           <a href="#" class="purple"><i class="icon-zoom-in bigger-130"></i></a>
+                                         </div>
+                                          <div class="action-buttons">
+                                            <a href="#" class="red"><i class="icon-zoom-in bigger-130"></i></a>
+                                          </div>
+                                          <div class="action-buttons">
+                                            <a href="#" class="green"><i class="icon-zoom-in bigger-130"></i></a>
+                                          </div>
+                                       </div><!--/badge badge success -->
+                                    </div><!---/infobox infobox-green -->
+                                	<div class="infobox infobox-green">
+										<div class="infobox-icon">
+											<i class="icon-comments"></i>
+									   </div><!---infobox-icon-->
+									   <div class="infobox-data">
+											<span class="infobox-data-number">16</span>
+											<div class="infobox-content">Overused</div>
+											<div class="infobox-content">(time, POH?)</div>
+									   </div><!--/infobox-data -->
+                                       <div class="badge badge-success">
+                                    	Statistics
+                                          <div class="action-buttons">
+                                           <a href="#" class="purple"><i class="icon-zoom-in bigger-130"></i></a>
+                                         </div>
+                                          <div class="action-buttons">
+                                            <a href="#" class="red"><i class="icon-zoom-in bigger-130"></i></a>
+                                          </div>
+                                          <div class="action-buttons">
+                                            <a href="#" class="green"><i class="icon-zoom-in bigger-130"></i></a>
+                                          </div>
+                                       </div><!--/badge badge success -->
+                                    </div><!---/infobox infobox-green -->
+                                   <div class="infobox infobox-green">
+										<div class="infobox-icon">
+											<i class="icon-comments"></i>
+									   </div><!---infobox-icon-->
+									   <div class="infobox-data">
+											<span class="infobox-data-number">3</span>
+											<div class="infobox-content">Degrading</div>
+											<div class="infobox-content">BER or sm2?</div>
+									   </div><!--/infobox-data -->
+                                       <div class="badge badge-success">
+                                    	Statistics
+                                          <div class="action-buttons">
+                                            <a href="#" class="purple"><i class="icon-zoom-in bigger-130"></i></a>
+                                         </div>
+                                       </div><!--/badge badge success -->
+                                    </div><!---/infobox infobox-green -->
+                                        <div class="infobox infobox-green">
+										<div class="infobox-icon">
+											<i class="icon-comments"></i>
+									   </div><!---infobox-icon-->
+									   <div class="infobox-data">
+											<span class="infobox-data-number">12</span>
+											<div class="infobox-content">Testing</div>
+											<div class="infobox-content">Recommended</div>
+									   </div><!--/infobox-data -->
+                                       <div class="badge badge-success">
+                                    	 Statistics
+                                          <div class="action-buttons">
+                                           <a href="#" class="purple"><i class="icon-zoom-in bigger-130"></i></a>
+                                         </div>
+                                          <div class="action-buttons">
+                                            <a href="#" class="red"><i class="icon-zoom-in bigger-130"></i></a>
+                                          </div>
+                                          <div class="action-buttons">
+                                            <a href="#" class="green"><i class="icon-zoom-in bigger-130"></i></a>
+                                          </div>
+                                       </div><!--/badge badge success -->
+                                    </div><!---/infobox infobox-green -->
+                                    <div class="infobox infobox-green">
+										<div class="infobox-icon">
+											<i class="icon-comments"></i>
+									   </div><!---infobox-icon-->
+									   <div class="infobox-data">
+											<span class="infobox-data-number">23 %</span>
+											<div class="infobox-content">Average</div>
+                                            <div class="infobox-content">Capacity</div>
+                                            <div class="infobox-content">Usage</div>
+									   </div><!--/infobox-data -->
+                                       <div class="badge badge-success">
+                                    	Statistics
+                                        <div class="action-buttons">
+                                           <a href="#" class="purple"><i class="icon-zoom-in bigger-130"></i></a>
+                                         </div>
+                                       </div><!--/badge badge success -->
+                                    </div><!---/infobox infobox-green -->
+                                   
+                                                </div><!--- END span 12 -->
+                                        <div><!--row-fluid -->
+                            <!--PAGE CONTENT BEGINS FOR DC Statistics Temperature and Drive Map-->
+							<div class="row-fluid">
+								<div class="span12 infobox-container"><br>	
+	                             	        <div class="infobox infobox-purple infobox-dark">
+										<div class="infobox-data">
+											<div class="infobox-content">DC Statistics</div>
+											<div class="infobox-content">Summary</div>
+                                                                                
+										</div>
+                                              </div><!---infobox purple -->
+                                           
+                                             <div class="infobox infobox-red infobox-dark"> 
+										<div class="infobox-data">
+											<div class="infobox-content">Temperature</div>
+											<div class="infobox-content">Detailed and Summary</div>
+										</div>
+				  	     </div><!--- infobox red -->
+                                            <div class="infobox infobox-green infobox-dark">
+										<div class="infobox-data">
+											<div class="infobox-content">Drive</div>
+											<div class="infobox-content">Map</div>
+										</div>
+					    </div><!---/infobox green -->
+                                    
+                                                </div> <!-- END span-12 -->
+
+                                        </div> <!--- END row-fluid -->
+                    <div class="row-fluid">
+                       <div class="span 12">
+                          <%= render 'layouts/dcstatistics' %>
+                       </div> 
+                    </div>  
+                        <!-- CONTENT ENDS-->
+       
+		</div><!--/.main-container fluid-->
+                        </div><!-- END main-content-->
+				</div><!-- END page-content-->
+				        </div><!-- END row-fluid -->
+</body>
+</html>

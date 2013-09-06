@@ -2,6 +2,17 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+September 5, 2013
+
+Updated Rails project to match the \demo index.html page
+Merged index.html to application.html.erb
+Updated project to Rails, Bootstrap, Less and the Asset Pipeline
+Additional changes to \assets for less and font-awesome
+To Do: fix jquery and flot graphing
+To Run
+  Launch the rails server by typing: rails server
+  Open a browser session by typing: http://localhost:3000
+
 September 3, 2013
 
 \demo directory contains HTML demo version
