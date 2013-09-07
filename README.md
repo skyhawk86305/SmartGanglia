@@ -2,6 +2,17 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+September 6, 2013
+
+Routing for home page(index.html)
+Additional jquery fixes.
+Added .idea files for WebStorm and RubyMine
+Cleaned up \assets directories 
+To Do: fix jquery and flot graphing
+To Run
+  Launch the rails server by typing: rails server
+  Open a browser session by typing: http://localhost:3000
+
 September 5, 2013
 
 Updated Rails project to match the \demo index.html page
