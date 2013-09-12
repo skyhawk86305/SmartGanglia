@@ -2,6 +2,12 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+September 11,2013
+
+Removed Rails.
+Updated project as HTML/Bootstrap only
+based on the metro dashboard 
+
 September 11, 2013
 
 Created Metro Style Demo for 09-11-2013
