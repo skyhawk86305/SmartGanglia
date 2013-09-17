@@ -3,6 +3,7 @@ SmartGanglia
 SmartGanglia Project
 
 September 16
+  Added SmartGanglia, CosBench, Remote Tester and Pattern Detection containers
   Updated flavicon.ico
   Implemented forward/backward browser navigation
   Added /Working directory for GUI look and feel reference  
