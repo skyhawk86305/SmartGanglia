@@ -2,6 +2,17 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+September 13
+Resized to two rows with 4 containers
+Changed all units from TB to Drives.
+Added Statistics
+Changed Average Capacity to TB from Drives
+
+September 12
+Resized containers
+Added Celsius to Temperature Chart
+
+
 September 11,2013
 
 Removed Rails.

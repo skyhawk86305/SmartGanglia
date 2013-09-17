@@ -2,6 +2,11 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+September 16
+  Updated flavicon.ico
+  Implemented forward/backward browser navigation
+  Added /Working directory for GUI look and feel reference  
+  Added /SmartGanglia-Rails  Ruby on Rails project as GUI look and feel reference for Smart Ganglia content   
 September 13
 Resized to two rows with 4 containers
 Changed all units from TB to Drives.

@@ -21,7 +21,6 @@
 	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- end: CSS -->
-	
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -39,14 +38,16 @@
 
 <style>
 
-
-
 </style>
-
 		
 </head>
 
 <body>
+
+ <!-- the input fields that will hold the variables we will use -->
+ 
+    <input type='hidden' id='current_page' />
+    <input type='hidden' id='show_per_page' />
 		<!-- start: Header -->
 	<div class="navbar">
 		<div class="navbar-inner">
@@ -291,25 +292,25 @@
 			
 			<!-- start: Content -->
 			<div id="content" class="span10">
-			
-			
-			<ul class="breadcrumb">
-				<li>
-					<i class="icon-home"></i>
-					<a href="index.html">Home</a> 
-					<i class="icon-angle-right"></i>
-				</li>
-				<li><a href="#">All Hands Demo</a></li>
-			</ul>
-
-			<div class="row-fluid">
-				
+            
+          
+			 <ul class="breadcrumb">
+				  <li>
+					    <i class="icon-home"></i>
+					    <a href="index.html">Home</a> 
+					    <i class="icon-angle-right"></i>
+				    </li>
+               	    <li><a href="#">All Hands Demo</a>
+               	    
+                    </li>
+            </ul>
+				<div class="row-fluid">
 				<div class="span3 statbox purple" onTablet="span6" onDesktop="span3">
 					<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
 				<!---	<div class="number">7653<i class="icon-arrow-up"></i></div>  -->
-					<div class="title">Drill Down</div>
+					<div class="title">Smart Ganglia</div>
 					<div class="footer">
-						<a href="http://cbmserver.colo.seagate.com/ganglia"> read full report</a>
+						<a href="smartganglia.html"> read full report</a>
 					</div>	
 				</div>
 				<div class="span3 statbox green" onTablet="span6" onDesktop="span3">
@@ -318,7 +319,7 @@
 					<!---<div class="number">33,38,35<i class="icon-arrow-up"></i></div> -->
 					<div class="title">Remote Tester</div>
 					<div class="footer">
-						<a href="#"> read full report</a>
+						<a href="remote-tester.html"> read full report</a>
 					</div>
 				</div>
 				<div class="span3 statbox blue noMargin" onTablet="span6" onDesktop="span3">
@@ -326,7 +327,7 @@
 				<!---	<div class="number">10,15,12<i class="icon-arrow-up"></i></div> -->
 					<div class="title">Cosbench</div>
 					<div class="footer">
-						<a href="http://cbmserver.colo.seagate.com/smartDemo/report.pdf"> read full report</a>
+						<a href="cosbench.html"> read full report</a>
 					</div>
 				</div>
 				<div class="span3 statbox yellow" onTablet="span6" onDesktop="span3">
@@ -334,7 +335,7 @@
 				<!---	<div class="number">678<i class="icon-arrow-down"></i></div> -->
 					<div class="title">Pattern Detection</div>
 					<div class="footer">
-						<a href="#"> read full report</a>
+						<a href="pattern-detection.html"> read full report</a>
 					</div>
 				</div>	
 				
@@ -586,7 +587,7 @@
 	
 	<!-- start: JavaScript-->
 
-		<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/jquery-migrate-1.0.0.min.js"></script>
 	
 		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
