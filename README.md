@@ -2,6 +2,11 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+Sepetmber 17
+  Added login and charts pages
+  Added Seagate Header and footer
+  Jquery changes
+
 September 16
   Added SmartGanglia, CosBench, Remote Tester and Pattern Detection containers
   Updated flavicon.ico

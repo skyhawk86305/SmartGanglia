@@ -1747,28 +1747,18 @@ function charts() {
 
 		update();
 	}
-
-
-if($("#serverLoad2").length)
+	
+	if($("#serverLoad2").length)
 	{	
 		var options = {
 			series: { shadowSize: 1 },
 			lines: { show: true, lineWidth: 2, fill: true, fillColor: { colors: [ { opacity: 0.9 }, { opacity: 0.9 } ] }},
 			yaxis: { min: 0, max: 40, tickFormatter: function (v) { return v + " Celsius"; }, color: "rgba(255,255,255,0.8)"},
-			xaxis: { min: 0, max: 24, show: true,  color: "rgba(255,255,255,0.8)" },
+			xaxis: { show: false, color: "rgba(255,255,255,0.8)" },
 			colors: ["rgba(255,255,255,0.95)"],
-			grid: {
-				  tickColor: "rgba(255,255,255,0.15)",
-				  borderWidth: 1,
-				  margin: {
-				  	top: 4,
-				  	bottom: 15,
-				  	left: 10
-				  }
+			grid: {	tickColor: "rgba(255,255,255,0.15)",
+					borderWidth: 0, 
 			},
-			legend: {
-				show: true
-			}
 		};
 		var plot = $.plot($("#serverLoad2"), [ getRandomData() ], options);
 		function update() {
@@ -1781,7 +1771,7 @@ if($("#serverLoad2").length)
 
 		update();
 	}
-		
+	
 	if($("#realtimechart").length)
 	{
 		var options = {
