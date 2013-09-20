@@ -2,8 +2,19 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+September 19
+ Added Heat and List View Icons to all containers
+ Added content for Drives Online Heat Map and List View
+ Added DCStatistics Menu
+ Modified Drives Online to show SAS and SATA drives
+ Removed white shadows in plots
+ Modified all container headings for consistant font
+ Changed main container colors to blue
+
+
 Sepetmber 17
   Added login and charts pages
+  Menu page navigation
   Added Seagate Header and footer
   Jquery changes
 
