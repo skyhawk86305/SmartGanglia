@@ -2,6 +2,10 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+September 20
+ Added Heat map
+ Modified Drives Online container to reverse SAS / SATA display with drives online
+
 September 19
  Added Heat and List View Icons to all containers
  Added content for Drives Online Heat Map and List View

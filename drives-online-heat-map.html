@@ -1228,6 +1228,19 @@ p.drop-menu-p-tags {
 .googleLinks.accountHold li:leftAccountInfo {
 }
 
+/* Day/Hour Heat Map changes    */
+
+ .rect.bordered {
+        stroke: #E6E6E6;
+        stroke-width:2px;   
+      }
+
+      text.mono {
+        font-size: 9pt;
+        font-family: Consolas, courier;
+        fill: #aaa;
+      }
+
 </style>
 
 <!--[if IE 8]><link rel="stylesheet" href="includes/css/styles_ie8.css" type="text/css" media="screen" /><![endif]-->
@@ -1323,8 +1336,13 @@ p.drop-menu-p-tags {
            <!-- Smat Ganglia Content -->
 
 			<div class="row-fluid">
+				<div class="page-header position-relative">
+						<h1>
+							<center>Drives Online Heat Map</center> 
+						 </h1>
+			</div><!--/.page-header-->
 					<div class ="span10" onTablet="span8" onDesktop="span10">
-			    			<img src="HeatMap_html_6c586f3b.gif" alt="HeatMap">
+			    		<div id="chart"></div>
                     </div>
             </div>
             </div> <!--.id=content class=span12 --> 
@@ -1357,8 +1375,7 @@ p.drop-menu-p-tags {
 	</footer>
 	
 	<!-- start: JavaScript-->
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+   
     <script>
 			// Wait until the DOM has loaded before querying the document
 			$(document).ready(function(){
@@ -1396,13 +1413,16 @@ p.drop-menu-p-tags {
 				});
 			});
 	</script> 
-
+    
+  
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/jquery-migrate-1.0.0.min.js"></script>
 	
 		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
 	
 		<script src="js/jquery.ui.touch-punch.js"></script>
+
+		<script src="http://d3js.org/d3.v3.js"></script>
 	
 		<script src="js/modernizr.js"></script>
 	
@@ -1457,7 +1477,79 @@ p.drop-menu-p-tags {
 		<script src="js/retina.js"></script>
 
 		<script src="js/custom.js"></script>
+       <script src="http://d3js.org/d3.v3.js"></script> 
+	   <script type="text/javascript">
+                
+			    var margin = { top: 50, right: 0, bottom: 100, left: 80 },
+          		 	  width = 960 - margin.left - margin.right,
+          			  height = 430 - margin.top - margin.bottom,
+          			  gridSize = Math.floor(width / 28),
+          			  legendElementWidth = gridSize*2,
+          			  buckets = 9,
+          			  colors = ["#61B329", "#61B329", "#61B329","#61B329","#61B329","#61B329","#61B329", "FFC1C1", "EE0000"], // alternatively colorbrewer.YlGnBu[9]
+          			  days = ["Temperature"],
+          			  times = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28"];
+    			d3.tsv("data.tsv",
+        			function(d) {
+          			  return {
+            			day: +d.day,
+           				hour: +d.hour,
+           				value: +d.value
+          			};
+        		},
+		
 
+        function(error, data) {
+          var colorScale = d3.scale.quantile()
+              .domain([0, buckets - 1, d3.max(data, function (d) { return d.value; })])
+              .range(colors);
+
+          var svg = d3.select("#chart").append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+          var dayLabels = svg.selectAll(".dayLabel")
+              .data(days)
+              .enter().append("text")
+                .text(function (d) { return d; })
+                .attr("x", 0)
+                .attr("y", function (d, i) { return i * gridSize; })
+                .style("text-anchor", "end")
+                .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
+                .attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "dayLabel mono axis axis-workweek" : "dayLabel mono axis"); });
+
+          var timeLabels = svg.selectAll(".timeLabel")
+              .data(times)
+              .enter().append("text")
+                .text(function(d) { return d; })
+                .attr("x", function(d, i) { return i * gridSize; })
+                .attr("y", 0)
+                .style("text-anchor", "middle")
+                .attr("transform", "translate(" + gridSize / 2 + ", -6)")
+                .attr("class", function(d, i) { return ((i >= 7 && i <= 16) ? "timeLabel mono axis axis-worktime" : "timeLabel mono axis"); });  
+
+          var heatMap = svg.selectAll(".hour")
+              .data(data)
+              .enter().append("rect")
+              .attr("x", function(d) { return (d.hour - 1) * gridSize; })
+              .attr("y", function(d) { return (d.day - 1) * gridSize; })
+              .attr("rx", 4)
+              .attr("ry", 4)
+              .attr("class", "hour bordered")  
+              .attr("width", gridSize)
+              .attr("height", gridSize)
+              .style("fill", colors[0]);
+
+          heatMap.transition().duration(1000)
+              .style("fill", function(d) { return colorScale(d.value); });
+
+          heatMap.append("title").text(function(d) { return d.value; }); 
+         
+      });
+
+	</script>
 
 		<script type="text/javascript">
 			jQuery(function($) {
@@ -1545,8 +1637,7 @@ p.drop-menu-p-tags {
 				}
 				
 			 });
-						
-			
+					
 				var d1 = [ [4, 20], [8, 29], [12, 21], [16, 33], [20, 36], [23, 36], [30, 34], [36, 38], [40, 30], [44, 35], [48, 36 ] ];
 				var d2=  [ [4, 30], [8, 32], [12, 26], [16, 33], [20, 30], [23, 34], [28, 30], [36, 38], [40, 35], [44, 36], [48, 30] ];
 						
