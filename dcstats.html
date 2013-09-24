@@ -1228,6 +1228,27 @@ p.drop-menu-p-tags {
 .googleLinks.accountHold li:leftAccountInfo {
 }
 
+.btn-custom {
+  background-color: hsl(70, 11%, 23%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7b7f66", endColorstr="#3e4134");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#7b7f66), to(#3e4134));
+  background-image: -moz-linear-gradient(top, #7b7f66, #3e4134);
+  background-image: -ms-linear-gradient(top, #7b7f66, #3e4134);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7b7f66), color-stop(100%, #3e4134));
+  background-image: -webkit-linear-gradient(top, #7b7f66, #3e4134);
+  background-image: -o-linear-gradient(top, #7b7f66, #3e4134);
+  background-image: linear-gradient(#7b7f66, #3e4134);
+  border-color: #3e4134 #3e4134 hsl(70, 11%, 17.5%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.36);
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-group-vertical {
+	padding-left: 30px;
+}
+
 </style>
 
 <!--[if IE 8]><link rel="stylesheet" href="includes/css/styles_ie8.css" type="text/css" media="screen" /><![endif]-->
@@ -1322,13 +1343,43 @@ p.drop-menu-p-tags {
 				</ul>
 
 				<div class="row-fluid">
-					<div class ="span10" onTablet="span8" onDesktop="span10">
-			    			<h1><center>DC Statistics Content Page </h1></center>
+					<div class ="span12" onTablet="span3" onDesktop="span3">
+			    			<h1><center>Temperature </h1></center><br>
+
+                    	<div class="span3 widget blue" onTablet="span3" onDesktop="span3">
+				      		<div class="title"><center><font size="3" color = "FFFFFF">HDD Temperature</font></center></div>
+				      		<div class="title-2"><center><font size="3" color = "FFFFFF">Rack 1</font></center></div>
+				<!--	<h2><span class="glyphicons hdd"><i></i></span> Workload Rate Over the Last Month (GB/day) </h2> -->
+					     	<div id="stats-chart2"  style="height:180px" ></div>
+						</div>
+						<div class="span3 widget blue" onTablet="span3" onDesktop="span3">    
+  					  		<div class="title"><center><font size="3" color = "FFFFFF">HDD Temperature</font></center></div>
+				      		<div class="title-2"><center><font size="3" color = "FFFFFF">Rack 2</font></center></div>
+				<!--	<h2><span class="glyphicons hdd"><i></i></span> Workload Rate Over the Last Month (GB/day) </h2> -->
+					  		<div id="stats-chart2" style="height:180px" ></div>
+						</div>
+						<div class="span3 widget blue" onTablet="span3" onDesktop="span3">    
+  					  		<div class="title"><center><font size="3" color = "FFFFFF">HDD Temperature</font></center></div>
+				      		<div class="title-2"><center><font size="3" color = "FFFFFF">Rack 3</font></center></div>
+				<!--	<h2><span class="glyphicons hdd"><i></i></span> Workload Rate Over the Last Month (GB/day) </h2> -->
+					  		<div id="stats-chart2" style="height:180px" ></div>
+					  	</div>	
+					   	<div class="btn-group-vertical">
+					  			<button type="button" class="btn btn-custom">1 Hour</button>
+  								<button type="button" class="btn btn-custom">24 Hour</button>
+  							    <button type="button" class="btn btn-custom">1 week</button>
+  						</div>
+						<div class="widget red span4 noMargin" onTablet="span4" onDesktop="span4">
+							<div class="title"><center><font size="3" color = "FFFFFF">Drive Temperature (Fraction of tMax)</font></center></div>
+                                       <!-- <h2><span class="glyphicons fire"><i></i></span> Drive Temperature (Fraction of Tmax)</h2> -->
+                                       <hr>
+                                       		 <div class="content">
+                                        <div id="serverLoad2" style="height:180px;"></div>
+                        </div>
                     </div>
-                </div> <!-- row-fluid -->
+				</div> <!-- row-fluid -->
             </div> <!--.id=content class=span12 --> 
-   	<div> <!-- row-fluid  -->
-<div> <!-- container-fluid-full -->
+   		<div> <!-- container-fluid-full -->
 	
 <div class="clearfix"></div>
 	

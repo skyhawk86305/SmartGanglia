@@ -2,6 +2,9 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+September 23
+ Changes for DCStatistics page
+
 September 20
  Added Heat map
  Modified Drives Online container to reverse SAS / SATA display with drives online
