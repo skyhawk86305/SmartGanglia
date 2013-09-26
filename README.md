@@ -2,6 +2,9 @@ SmartGanglia
 ============
 SmartGanglia Project
 
+September 26
+ Updates to dcstats.html for Heat Map Graphs for HDD 2 and 3 
+
 September 24
  Changes for List View for Drives Online
  Formatting changes for List View
